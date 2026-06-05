@@ -15,6 +15,8 @@ function Products() {
   const fetchProducts = async () => {
     try {
       const response = await api.get("/products/");
+      console.log(response.data);
+      console.log("API URL =", import.meta.env.VITE_API_URL);
       setProducts(response.data);
     } catch (error) {
       console.log(error);
